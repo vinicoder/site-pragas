@@ -173,6 +173,19 @@ export default function RootLayout({
             `,
           }}
         />
+
+        {/* Event snippet for Page view conversion */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              gtag('event', 'conversion', {
+                'send_to': 'AW-17698807037/Ke4yCNyAlrkbEP25ufdB',
+                'value': 1.0,
+                'currency': 'BRL'
+              });
+            `,
+          }}
+        />
       </head>
       <body className={inter.className}>
         {/* 
