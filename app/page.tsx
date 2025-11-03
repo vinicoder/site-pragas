@@ -580,7 +580,7 @@ export default function Home() {
                 <h2 className="mb-4 text-3xl font-semibold tracking-tight lg:text-4xl">
                   Entre em Contato
                 </h2>
-                <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
+                <p className="text-muted-foreground lg:mx-auto max-w-2xl text-lg">
                   Nossa equipe está pronta para atender você. Entre em contato
                   via WhatsApp, telefone ou e-mail e receba um orçamento
                   gratuito.
