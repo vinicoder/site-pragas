@@ -466,7 +466,7 @@ export default function Home() {
               Veja o que nossos clientes dizem sobre nosso trabalho profissional
             </p>
             <a
-              href="https://www.google.com/search?q=br+pragas+campinas#mpd=~3083268162326719619/customers/reviews"
+              href="https://www.google.com/maps/place/BR+Pragas+-+Dedetiza%C3%A7%C3%A3o+e+Desratiza%C3%A7%C3%A3o+-+Campinas/@-22.8797915,-47.0933215,17z/data=!4m8!3m7!1s0x94c8cf603bad2a95:0x2ad1e75b33c0e753!8m2!3d-22.8797915!4d-47.0933215!9m1!1b1!16s%2Fg%2F11t6c2c67w"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1 font-semibold text-[#6bbf4b] hover:text-[#4a9f32] transition-colors"
