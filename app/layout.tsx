@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -157,44 +158,33 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
         />
-
-        {/* Google Ads (gtag.js) */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=AW-17698807037"
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'AW-17698807037');
-            `,
-          }}
-        />
-
-        {/* Event snippet for Page view conversion */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              gtag('event', 'conversion', {
-                'send_to': 'AW-17698807037/Ke4yCNyAlrkbEP25ufdB',
-                'value': 1.0,
-                'currency': 'BRL'
-              });
-            `,
-          }}
-        />
       </head>
       <body className={inter.className}>
-        {/* 
-          TODO: Add GTM noscript here
-          <noscript>
-            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe>
-          </noscript>
-        */}
+        {/* Google Ads (gtag.js) - Using Next.js Script component */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17698807037"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17698807037');
+          `}
+        </Script>
+
+        {/* Event snippet for Page view conversion */}
+        <Script id="google-ads-pageview" strategy="afterInteractive">
+          {`
+            gtag('event', 'conversion', {
+              'send_to': 'AW-17698807037/Ke4yCNyAlrkbEP25ufdB',
+              'value': 1.0,
+              'currency': 'BRL'
+            });
+          `}
+        </Script>
+
         {children}
       </body>
     </html>
