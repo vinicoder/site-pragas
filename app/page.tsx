@@ -1,5 +1,10 @@
 "use client";
 
+// Declaração global do gtag para TypeScript
+declare global {
+  function gtag(...args: any[]): void;
+}
+
 import {
   ArrowRight,
   ArrowUpRight,
@@ -66,6 +71,23 @@ const whatsappNumber = "5519997108660";
 const whatsappMessage = encodeURIComponent(
   "Olá! Vi seu site e gostaria de solicitar um orçamento para dedetização."
 );
+
+// Event snippet for Solicitação Orçamento WhatsApp conversion page
+// Código EXATAMENTE como fornecido pelo Google Ads (2025)
+function gtag_report_conversion(url?: string) {
+  var callback = function () {
+    if (typeof url != "undefined") {
+      window.location.href = url;
+    }
+  };
+  gtag("event", "conversion", {
+    send_to: "AW-17698807037/YN0cCM_OkLkbEP25ufdB",
+    value: 1.0,
+    currency: "BRL",
+    event_callback: callback,
+  });
+  return false;
+}
 
 const features = [
   {
@@ -252,6 +274,12 @@ const MobileNav = ({
               <Button asChild variant="default">
                 <a
                   href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    gtag_report_conversion(
+                      `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`
+                    );
+                  }}
                 >
                   WhatsApp
                 </a>
@@ -360,7 +388,15 @@ function BRPragasNavbar() {
 
         <div className="hidden items-center gap-2 lg:flex">
           <Button asChild size="sm" className="h-10 py-2.5 text-sm font-normal">
-            <a href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}>
+            <a
+              href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+              onClick={(e) => {
+                e.preventDefault();
+                gtag_report_conversion(
+                  `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`
+                );
+              }}
+            >
               WhatsApp
             </a>
           </Button>
@@ -399,7 +435,11 @@ export default function Home() {
               </p>
               <div className="mb-12 flex w-fit items-start gap-4">
                 <div className="flex h-12 w-12 items-center justify-center bg-white rounded-full border-2 border-gray-200 shadow-sm">
-                  <svg className="h-7 w-7 pointer-events-none" viewBox="0 0 512 512" fill="none">
+                  <svg
+                    className="h-7 w-7 pointer-events-none"
+                    viewBox="0 0 512 512"
+                    fill="none"
+                  >
                     <path
                       d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"
                       fill="#4285F4"
@@ -425,11 +465,22 @@ export default function Home() {
                 <Button asChild size="lg" className="w-full sm:w-auto">
                   <a
                     href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      gtag_report_conversion(
+                        `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`
+                      );
+                    }}
                   >
                     Solicitar Orçamento Grátis
                   </a>
                 </Button>
-                <Button asChild variant="secondary" size="lg" className="w-full sm:w-auto">
+                <Button
+                  asChild
+                  variant="secondary"
+                  size="lg"
+                  className="w-full sm:w-auto"
+                >
                   <a href="tel:+5519997108660">📞 Ligar Agora</a>
                 </Button>
               </div>
@@ -451,7 +502,11 @@ export default function Home() {
         <section id="depoimentos" className="py-32 bg-white">
           <div className="container flex flex-col items-start lg:items-center gap-4">
             <div className="flex items-center gap-2 text-sm font-semibold text-[#1f4d2b]">
-              <svg className="h-6 w-6 pointer-events-none" viewBox="0 0 512 512" fill="none">
+              <svg
+                className="h-6 w-6 pointer-events-none"
+                viewBox="0 0 512 512"
+                fill="none"
+              >
                 <path
                   d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"
                   fill="#4285F4"
@@ -594,6 +649,12 @@ export default function Home() {
                         </p>
                         <a
                           href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            gtag_report_conversion(
+                              `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`
+                            );
+                          }}
                           className="text-sm font-medium transition-colors hover:underline text-[#6bbf4b]"
                         >
                           (19) 9 9710-8660

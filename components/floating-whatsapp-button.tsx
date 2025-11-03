@@ -1,7 +1,29 @@
 "use client";
 
+// Declaração global do gtag para TypeScript
+declare global {
+  function gtag(...args: any[]): void;
+}
+
 import { IoLogoWhatsapp } from "react-icons/io5";
 import { Badge } from "@/components/ui/badge";
+
+// Event snippet for Solicitação Orçamento WhatsApp conversion page
+// Código EXATAMENTE como fornecido pelo Google Ads (2025)
+function gtag_report_conversion(url?: string) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location.href = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17698807037/YN0cCM_OkLkbEP25ufdB',
+      'value': 1.0,
+      'currency': 'BRL',
+      'event_callback': callback
+  });
+  return false;
+}
 
 export function FloatingWhatsappButton() {
   const whatsappNumber = "5519997108660";
@@ -9,11 +31,19 @@ export function FloatingWhatsappButton() {
     "Olá! Vi seu site e gostaria de solicitar um orçamento."
   );
 
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    gtag_report_conversion(
+      `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`
+    );
+  };
+
   return (
     <a
       href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={handleClick}
       className="fixed bottom-6 right-6 z-50 group"
       aria-label="Contato via WhatsApp"
     >
