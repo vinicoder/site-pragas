@@ -69,12 +69,6 @@ const whatsappMessage = encodeURIComponent(
 
 const features = [
   {
-    title: "Atendimento 24/7",
-    description:
-      "Disponível todos os dias, inclusive feriados e fins de semana.",
-    icon: Clock,
-  },
-  {
     title: "Avaliação 5.0 ⭐",
     description: "43 avaliações positivas no Google Meu Negócio.",
     icon: StarIcon,
@@ -187,11 +181,6 @@ const stats = [
     value: "5.0",
     label: "Avaliação Google",
     icon: Star,
-  },
-  {
-    value: "24/7",
-    label: "Atendimento",
-    icon: Bell,
   },
 ];
 
@@ -626,7 +615,7 @@ export default function Home() {
                           <h3 className="font-semibold">E-mail</h3>
                         </div>
                         <p className="text-muted-foreground mb-2 text-sm">
-                          Resposta em até 24 horas
+                          Resposta rápida por e-mail
                         </p>
                         <a
                           href="mailto:campinas@brpragas.com.br"
