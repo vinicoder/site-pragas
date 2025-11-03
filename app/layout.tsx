@@ -5,7 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "BR Pragas Campinas | Dedetização de cupins, ratos, baratas, escorpiões, formigas e aranhas",
+  title:
+    "BR Pragas Campinas | Dedetização de cupins, ratos, baratas, escorpiões, formigas e aranhas",
   description:
     "Dedetização em Campinas e região com avaliação 5.0 ⭐ (43 avaliações). Orçamento grátis via WhatsApp. Controle de cupins, ratos, baratas, escorpiões e mais.",
   keywords: [
@@ -17,7 +18,8 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "BR Pragas Campinas" }],
   openGraph: {
-    title: "BR Pragas Campinas | Dedetização de cupins, ratos, baratas, escorpiões, formigas e aranhas",
+    title:
+      "BR Pragas Campinas | Dedetização de cupins, ratos, baratas, escorpiões, formigas e aranhas",
     description:
       "Dedetização em Campinas com avaliação 5.0. Orçamento grátis via WhatsApp. Atendimento rápido!",
     type: "website",
@@ -145,24 +147,21 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
         />
 
-        {/* 
-          TODO: Add Google Tag Manager when ready
-          Instructions:
-          1. Create GTM account at tagmanager.google.com
-          2. Add GTM container script here in <head>
-          3. Add noscript iframe right after <body>
-          4. Configure Google Ads conversion tracking in GTM
-          5. Set up events for: WhatsApp click, Phone click, Form submission
-          
-          Example GTM head script:
-          <script>
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-XXXXXXX');
-          </script>
-        */}
+        {/* Google Ads (gtag.js) */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17698807037"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-17698807037');
+            `,
+          }}
+        />
       </head>
       <body className={inter.className}>
         {/* 
