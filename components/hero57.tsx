@@ -2,7 +2,32 @@ import { CheckCircle2, Globe, Lock, Star, Zap } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 
-const Hero57 = () => {
+interface Hero57Props {
+  heading?: React.ReactNode;
+  description?: string;
+  button?: {
+    text: string;
+    url: string;
+  };
+  badge?: string;
+}
+
+const Hero57 = ({
+  heading = (
+    <span>
+      Create Winning
+      <span className="ml-1 opacity-50">Proposals</span> 10X Faster with
+      <Globe className="mx-2 mb-1 inline-block h-auto w-8 md:mx-4 md:mb-3 md:w-14" />
+      AI
+    </span>
+  ),
+  description = "Penna let you build high-converting, website-style proposals with AI, helping you win better customers without wasting time",
+  button = {
+    text: "Start free 14-day trial",
+    url: "#",
+  },
+  badge = "Powered by GPT-4",
+}: Hero57Props = {}) => {
   return (
     <section className="py-32">
       <div className="container">
@@ -18,12 +43,7 @@ const Hero57 = () => {
           }}
         ></div>
         <h1 className="relative mx-auto mb-8 max-w-3xl flex-wrap text-center text-4xl font-semibold md:mb-10 md:text-6xl md:leading-snug">
-          <span>
-            Create Winning
-            <span className="ml-1 opacity-50">Proposals</span> 10X Faster with
-            <Globe className="mx-2 mb-1 inline-block h-auto w-8 md:mx-4 md:mb-3 md:w-14" />
-            AI
-          </span>
+          {heading}
           <div className="border-muted-foreground text-muted-foreground underline-offset-3 absolute -left-20 -top-10 hidden w-fit -rotate-12 gap-1 border-b border-dashed text-sm font-normal lg:flex">
             <Zap className="h-auto w-3" />
             Fast
@@ -42,14 +62,17 @@ const Hero57 = () => {
           </div>
         </h1>
         <p className="text-muted-foreground mx-auto mb-10 max-w-3xl text-center font-medium md:text-xl">
-          Penna let you build high-converting, website-style proposals with AI,
-          helping you win better customers without wasting time
+          {description}
         </p>
         <div className="flex flex-col items-center justify-center gap-3 pb-12 pt-3">
-          <Button size="lg">Start free 14-day trial</Button>
-          <div className="text-muted-foreground text-sm md:text-balance">
-            Powered by GPT-4
-          </div>
+          <Button asChild size="lg">
+            <a href={button.url}>{button.text}</a>
+          </Button>
+          {badge && (
+            <div className="text-muted-foreground text-sm md:text-balance">
+              {badge}
+            </div>
+          )}
         </div>
       </div>
     </section>

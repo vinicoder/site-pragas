@@ -100,7 +100,35 @@ function RatingDisplay({
   );
 }
 
-const Hero64 = () => {
+interface Hero64Props {
+  heading?: React.ReactNode;
+  description?: string;
+  button?: {
+    text: string;
+    url: string;
+  };
+  rating?: number;
+  userCount?: number;
+}
+
+const Hero64 = ({
+  heading = (
+    <>
+      Leverage the{" "}
+      <span className="bg-linear-to-tr from-gray-600 to-gray-500 bg-clip-text text-transparent">
+        influence of testimonials
+      </span>{" "}
+      to boost your sales.
+    </>
+  ),
+  description = "Gather and display testimonials from happy customers to build trust and boost your conversion rate.",
+  button = {
+    text: "Start now – completely free!",
+    url: "#",
+  },
+  rating = 4.9,
+  userCount = 500,
+}: Hero64Props = {}) => {
   return (
     <section className="py-12 md:py-20">
       <div className="container px-4 md:px-6">
@@ -108,22 +136,17 @@ const Hero64 = () => {
           <div className="mx-auto flex items-start md:mx-0 md:w-1/2 md:items-center">
             <div className="text-center md:text-left">
               <h1 className="text-foreground text-4xl font-bold tracking-tight sm:text-5xl/tight md:text-6xl/tight">
-                Leverage the{" "}
-                <span className="bg-linear-to-tr from-gray-600 to-gray-500 bg-clip-text text-transparent">
-                  influence of testimonials
-                </span>{" "}
-                to boost your sales.
+                {heading}
               </h1>
               <p className="text-muted-foreground mx-auto mt-3 max-w-md text-base sm:text-lg md:mt-5 md:max-w-3xl md:text-xl">
-                Gather and display testimonials from happy customers to build
-                trust and boost your conversion rate.
+                {description}
               </p>
               <div className="mt-6 flex justify-center md:hidden">
-                <RatingDisplay />
+                <RatingDisplay rating={rating} userCount={userCount} />
               </div>
               <div className="mx-auto mt-8 w-fit md:ml-0">
-                <Button size="lg" className="px-6">
-                  Start now – completely free!
+                <Button asChild size="lg" className="px-6">
+                  <a href={button.url}>{button.text}</a>
                 </Button>
               </div>
             </div>
@@ -167,7 +190,11 @@ const Hero64 = () => {
                   objectFit: "cover",
                 }}
               />
-              <RatingDisplay className="bg-background absolute bottom-4 left-1/2 hidden w-[90%] -translate-x-1/2 rounded-md border px-3 py-2 shadow-lg md:bottom-auto md:left-auto md:right-0 md:top-[54%] md:flex md:w-auto md:translate-x-0" />
+              <RatingDisplay 
+                rating={rating} 
+                userCount={userCount}
+                className="bg-background absolute bottom-4 left-1/2 hidden w-[90%] -translate-x-1/2 rounded-md border px-3 py-2 shadow-lg md:bottom-auto md:left-auto md:right-0 md:top-[54%] md:flex md:w-auto md:translate-x-0" 
+              />
             </div>
           </div>
         </div>

@@ -48,7 +48,35 @@ const SLIDES = [
   { image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-3.svg", label: "Add Issues" },
 ];
 
-const Hero187 = () => {
+interface Hero187Props {
+  heading?: string;
+  description?: string;
+  buttons?: {
+    primary?: {
+      text: string;
+      url: string;
+    };
+    secondary?: {
+      text: string;
+      url: string;
+    };
+  };
+}
+
+const Hero187 = ({
+  heading = "Shadcnblocks components for your next project",
+  description = "Streamline is the fit-for-purpose tool for planning and building modern software products.",
+  buttons = {
+    primary: {
+      text: "Get started",
+      url: "#",
+    },
+    secondary: {
+      text: "Documentation",
+      url: "#",
+    },
+  },
+}: Hero187Props = {}) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [api, setApi] = useState<CarouselApi>();
 
@@ -71,12 +99,11 @@ const Hero187 = () => {
         <div className="space-y-8 lg:space-y-12">
           <div>
             <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
-              Shadcnblocks components for your next project
+              {heading}
             </h1>
 
             <p className="text-muted-foreground mt-6 text-2xl font-medium">
-              Streamline is the fit-for-purpose tool for planning and building
-              modern software products.
+              {description}
             </p>
           </div>
 
@@ -99,19 +126,26 @@ const Hero187 = () => {
           </div>
 
           <div className="flex flex-wrap items-center gap-4">
-            <Button aria-label="Get started">Get started</Button>
-            <a href="#">
+            {buttons.primary && (
+              <Button asChild aria-label={buttons.primary.text}>
+                <a href={buttons.primary.url}>{buttons.primary.text}</a>
+              </Button>
+            )}
+            {buttons.secondary && (
               <Button
-                aria-label="Streamline raises $12M from Roba Ventures"
+                asChild
+                aria-label={buttons.secondary.text}
                 variant="outline"
                 className="max-sm:hidden"
               >
-                <span className="flex items-center gap-2 whitespace-pre-wrap text-start">
-                  Documentation
-                  <ArrowRight className="size-4" />
-                </span>
+                <a href={buttons.secondary.url}>
+                  <span className="flex items-center gap-2 whitespace-pre-wrap text-start">
+                    {buttons.secondary.text}
+                    <ArrowRight className="size-4" />
+                  </span>
+                </a>
               </Button>
-            </a>
+            )}
           </div>
 
           <SlideIndicator

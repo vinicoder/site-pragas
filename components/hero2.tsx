@@ -3,37 +3,83 @@ import { ArrowDownRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
-const Hero2 = () => {
+interface Hero2Props {
+  badge?: string;
+  heading?: string;
+  description?: string;
+  buttons?: {
+    primary?: {
+      text: string;
+      url: string;
+    };
+    secondary?: {
+      text: string;
+      url: string;
+    };
+  };
+  image?: {
+    src: string;
+    alt: string;
+  };
+}
+
+const Hero2 = ({
+  badge = "New Release",
+  heading = "Blocks built with Shadcn & Tailwind",
+  description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Elig doloremque mollitia fugiat omnis! Porro facilis quo animi consequatur. Explicabo.",
+  buttons = {
+    primary: {
+      text: "Primary Button",
+      url: "#",
+    },
+    secondary: {
+      text: "Secondary Button",
+      url: "#",
+    },
+  },
+  image = {
+    src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-1.svg",
+    alt: "placeholder hero",
+  },
+}: Hero2Props = {}) => {
   return (
     <section className="py-32">
       <div className="container">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <div className="bg-muted flex justify-end">
             <img
-              src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-1.svg"
-              alt="placeholder hero"
+              src={image.src}
+              alt={image.alt}
               className="max-h-[600px] w-full rounded-md object-cover lg:max-h-[800px]"
             />
           </div>
           <div className="flex flex-col items-center text-center lg:max-w-3xl lg:items-start lg:text-left">
-            <Badge variant="secondary">
-              New Release
-              <ArrowDownRight className="ml-2 size-4" />
-            </Badge>
+            {badge && (
+              <Badge variant="secondary">
+                {badge}
+                <ArrowDownRight className="ml-2 size-4" />
+              </Badge>
+            )}
             <h1 className="my-6 text-pretty text-4xl font-bold md:text-5xl">
-              Blocks built with Shadcn & Tailwind
+              {heading}
             </h1>
             <p className="text-muted-foreground mb-8 max-w-xl lg:text-xl">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Elig
-              doloremque mollitia fugiat omnis! Porro facilis quo animi
-              consequatur. Explicabo.
+              {description}
             </p>
             <div className="flex w-full flex-col justify-center gap-2 sm:flex-row lg:justify-start">
-              <Button className="w-full sm:w-auto">Primary Button</Button>
-              <Button variant="outline" className="w-full sm:w-auto">
-                Secondary Button
-                <ArrowDownRight className="size-4" />
-              </Button>
+              {buttons.primary && (
+                <Button asChild className="w-full sm:w-auto">
+                  <a href={buttons.primary.url}>{buttons.primary.text}</a>
+                </Button>
+              )}
+              {buttons.secondary && (
+                <Button asChild variant="outline" className="w-full sm:w-auto">
+                  <a href={buttons.secondary.url}>
+                    {buttons.secondary.text}
+                    <ArrowDownRight className="size-4" />
+                  </a>
+                </Button>
+              )}
             </div>
           </div>
         </div>
