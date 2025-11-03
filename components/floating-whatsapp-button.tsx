@@ -12,15 +12,15 @@ import { Badge } from "@/components/ui/badge";
 // Código EXATAMENTE como fornecido pelo Google Ads (2025)
 function gtag_report_conversion(url?: string) {
   var callback = function () {
-    if (typeof(url) != 'undefined') {
+    if (typeof url != "undefined") {
       window.location.href = url;
     }
   };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-17698807037/YN0cCM_OkLkbEP25ufdB',
-      'value': 1.0,
-      'currency': 'BRL',
-      'event_callback': callback
+  gtag("event", "conversion", {
+    send_to: "AW-17698807037/YN0cCM_OkLkbEP25ufdB",
+    value: 1.0,
+    currency: "BRL",
+    event_callback: callback,
   });
   return false;
 }
