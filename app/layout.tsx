@@ -5,22 +5,21 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Dedetização Campinas 24h | Controle de Pragas | BR Pragas",
+  title: "Dedetização Campinas | Controle de Pragas | BR Pragas",
   description:
-    "Dedetização em Campinas e região com avaliação 5.0 ⭐ (43 avaliações). Orçamento grátis via WhatsApp. Controle de cupins, ratos, baratas, escorpiões e mais. Atendimento rápido 24/7!",
+    "Dedetização em Campinas e região com avaliação 5.0 ⭐ (43 avaliações). Orçamento grátis via WhatsApp. Controle de cupins, ratos, baratas, escorpiões e mais.",
   keywords: [
     "dedetização campinas",
     "controle de pragas campinas",
     "dedetizadora campinas",
     "desratização campinas",
     "descupinização campinas",
-    "dedetização 24 horas campinas",
   ],
   authors: [{ name: "BR Pragas Campinas" }],
   openGraph: {
-    title: "Dedetização Campinas 24h | BR Pragas ⭐5.0",
+    title: "Dedetização Campinas | BR Pragas ⭐5.0",
     description:
-      "Dedetização em Campinas com avaliação 5.0. Orçamento grátis via WhatsApp. Atendimento rápido 24/7!",
+      "Dedetização em Campinas com avaliação 5.0. Orçamento grátis via WhatsApp. Atendimento rápido!",
     type: "website",
     locale: "pt_BR",
   },
@@ -42,7 +41,7 @@ export default function RootLayout({
     name: "BR Pragas Campinas",
     image: "https://www.brpragas.com.br/logo.png",
     description:
-      "Controle de pragas, dedetização, desratização e descupinização em Campinas e região. Atendimento 24/7 com avaliação 5.0 estrelas.",
+      "Controle de pragas, dedetização, desratização e descupinização em Campinas e região com avaliação 5.0 estrelas.",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Rua Andrea Fernandes da Silva Araújo, 444",
