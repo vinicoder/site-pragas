@@ -386,9 +386,9 @@ export default function Home() {
     <>
       <BRPragasNavbar />
 
-      <main className="min-h-screen relative">
+      <main className="min-h-[100dvh] relative">
         {/* Hero Section - Hero3 ORIGINAL shadcnblocks */}
-        <section className="flex items-center overflow-hidden relative py-32 lg:py-0 h-screen">
+        <section className="flex items-center overflow-hidden relative py-32 lg:py-0 h-[100dvh]">
           <img
             src="/patterns-circles.svg"
             alt=""
@@ -399,7 +399,7 @@ export default function Home() {
             alt=""
             className="hidden lg:block absolute right-[-50.25rem] top-[-50.75rem] z-[-1] aspect-square h-auto w-[181.25rem] max-w-none scale-50"
           />
-          <div className="container min-h-0 lg:min-h-screen grid grid-rows-1 items-center gap-8 lg:items-stretch lg:grid-cols-2 lg:gap-20">
+          <div className="container min-h-0 lg:min-h-[100dvh] grid grid-rows-1 items-center gap-8 lg:items-stretch lg:grid-cols-2 lg:gap-20">
             <div className="mx-auto flex flex-col items-start text-left md:ml-auto lg:max-w-3xl lg:justify-center">
               <h1 className="my-6 text-pretty text-4xl font-bold lg:text-6xl">
                 Dedetização Profissional em Campinas e Região
@@ -449,7 +449,7 @@ export default function Home() {
               <Image
                 src="/hero.png"
                 alt="Técnico BR Pragas Campinas - Dedetização Profissional"
-                className="w-full max-w-md lg:w-auto lg:h-[calc(100vh-120px)] lg:max-w-none rounded-lg lg:rounded-none"
+                className="w-full max-w-md lg:w-auto lg:h-[calc(100dvh-120px)] lg:max-w-none rounded-lg lg:rounded-none"
                 width={1028}
                 height={915}
                 priority
