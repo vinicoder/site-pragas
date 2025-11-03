@@ -392,12 +392,12 @@ export default function Home() {
           <img
             src="/patterns-circles.svg"
             alt=""
-            className="block lg:hidden absolute w-full bottom-0 translate-y-1/2 scale-150"
+            className="block lg:hidden absolute w-full bottom-0 translate-y-1/2 scale-150 pointer-events-none"
           />
           <img
             src="/patterns-circles.svg"
             alt=""
-            className="hidden lg:block absolute right-[-50.25rem] top-[-50.75rem] z-[-1] aspect-square h-auto w-[181.25rem] max-w-none scale-50"
+            className="hidden lg:block absolute right-[-50.25rem] top-[-50.75rem] z-[-1] aspect-square h-auto w-[181.25rem] max-w-none scale-50 pointer-events-none"
           />
           <div className="container min-h-0 lg:min-h-[100dvh] grid grid-rows-1 items-center gap-8 lg:items-stretch lg:grid-cols-2 lg:gap-20">
             <div className="mx-auto flex flex-col items-start text-left md:ml-auto lg:max-w-3xl lg:justify-center">
@@ -410,7 +410,7 @@ export default function Home() {
               </p>
               <div className="mb-12 flex w-fit items-start gap-4">
                 <div className="flex h-12 w-12 items-center justify-center bg-white rounded-full border-2 border-gray-200 shadow-sm">
-                  <svg className="h-7 w-7" viewBox="0 0 512 512" fill="none">
+                  <svg className="h-7 w-7 pointer-events-none" viewBox="0 0 512 512" fill="none">
                     <path
                       d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"
                       fill="#4285F4"
@@ -462,7 +462,7 @@ export default function Home() {
         <section id="depoimentos" className="py-32 bg-white">
           <div className="container flex flex-col items-start lg:items-center gap-4">
             <div className="flex items-center gap-2 text-sm font-semibold text-[#1f4d2b]">
-              <svg className="h-6 w-6" viewBox="0 0 512 512" fill="none">
+              <svg className="h-6 w-6 pointer-events-none" viewBox="0 0 512 512" fill="none">
                 <path
                   d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"
                   fill="#4285F4"
