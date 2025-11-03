@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "BR Pragas Campinas | Dedetização de cupins, ratos, baratas e escorpiões",
+  title: "BR Pragas Campinas | Dedetização de cupins, ratos, baratas, escorpiões, formigas e aranhas",
   description:
     "Dedetização em Campinas e região com avaliação 5.0 ⭐ (43 avaliações). Orçamento grátis via WhatsApp. Controle de cupins, ratos, baratas, escorpiões e mais.",
   keywords: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "BR Pragas Campinas" }],
   openGraph: {
-    title: "BR Pragas Campinas | Dedetização de cupins, ratos, baratas e escorpiões ⭐5.0",
+    title: "BR Pragas Campinas | Dedetização de cupins, ratos, baratas, escorpiões, formigas e aranhas",
     description:
       "Dedetização em Campinas com avaliação 5.0. Orçamento grátis via WhatsApp. Atendimento rápido!",
     type: "website",
