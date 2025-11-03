@@ -66,7 +66,7 @@ const Hero1 = ({
                 </Button>
               )}
               {buttons.secondary && (
-                <Button asChild variant="outline" className="w-full sm:w-auto">
+                <Button asChild variant="secondary" className="w-full sm:w-auto">
                   <a href={buttons.secondary.url}>
                     {buttons.secondary.text}
                     <ArrowRight className="size-4" />

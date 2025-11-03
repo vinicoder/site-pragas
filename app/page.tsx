@@ -440,7 +440,7 @@ export default function Home() {
                     Solicitar Orçamento Grátis
                   </a>
                 </Button>
-                <Button asChild variant="outline" size="lg">
+                <Button asChild variant="secondary" size="lg" className="w-full sm:w-auto">
                   <a href="tel:+5519997108660">📞 Ligar Agora</a>
                 </Button>
               </div>

@@ -135,7 +135,7 @@ const Hero187 = ({
               <Button
                 asChild
                 aria-label={buttons.secondary.text}
-                variant="outline"
+                variant="secondary"
                 className="max-sm:hidden"
               >
                 <a href={buttons.secondary.url}>

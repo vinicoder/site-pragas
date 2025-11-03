@@ -61,7 +61,7 @@ const Hero8 = ({
                   </Button>
                 )}
                 {buttons.secondary && (
-                  <Button asChild variant="ghost">
+                  <Button asChild variant="secondary">
                     <a href={buttons.secondary.url}>
                       {buttons.secondary.text}
                       <ChevronRight className="ml-2 h-4" />
