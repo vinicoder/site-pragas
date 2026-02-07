@@ -489,7 +489,7 @@ export default function Home() {
           <div className="container min-h-0 lg:min-h-[100dvh] grid grid-rows-1 items-center gap-8 lg:items-stretch lg:grid-cols-2 lg:gap-20">
             <div className="mx-auto flex flex-col items-start text-left md:ml-auto lg:max-w-3xl lg:justify-center">
               <h1 className="my-6 text-pretty text-4xl font-bold lg:text-6xl">
-                Dedetização Profissional em Campinas e Região
+                Dedetização e Desentupimento Profissional em Campinas e Região
               </h1>
               <p className="text-muted-foreground mb-8 max-w-xl lg:text-xl">
                 Controle eficaz de cupins, ratos, escorpiões, baratas, formigas,
