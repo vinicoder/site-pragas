@@ -190,5 +190,5 @@ Para modificações ou dúvidas:
 
 **Região de atendimento:** Campinas e Região
 
-**Serviços:** Dedetização • Desratização • Descupinização
+**Serviços:** Dedetização • Desratização • Descupinização • Desentupimento
 

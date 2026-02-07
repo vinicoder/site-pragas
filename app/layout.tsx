@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title:
     "BR Pragas Campinas | Dedetização de cupins, ratos, baratas, escorpiões, formigas e aranhas",
   description:
-    "Dedetização em Campinas e região com avaliação 5.0 ⭐ (43 avaliações). Orçamento grátis via WhatsApp. Controle de cupins, ratos, baratas, escorpiões e mais.",
+    "Dedetização em Campinas e região com avaliação 5.0 ⭐ (53 avaliações). Orçamento grátis via WhatsApp. Controle de cupins, ratos, baratas, escorpiões e mais.",
   keywords: [
     "dedetização campinas",
     "controle de pragas campinas",
@@ -90,7 +90,7 @@ export default function RootLayout({
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
-      reviewCount: "43",
+      reviewCount: "53",
       bestRating: "5",
       worstRating: "1",
     },
@@ -142,6 +142,13 @@ export default function RootLayout({
           itemOffered: {
             "@type": "Service",
             name: "Higienização de Caixa d'Água",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Desentupimento",
           },
         },
       ],

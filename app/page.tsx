@@ -92,7 +92,7 @@ function gtag_report_conversion(url?: string) {
 const features = [
   {
     title: "Avaliação 5.0 ⭐",
-    description: "43 avaliações positivas no Google Meu Negócio.",
+    description: "53 avaliações positivas no Google Meu Negócio.",
     icon: StarIcon,
   },
   {
@@ -108,6 +108,62 @@ const features = [
 ];
 
 const testimonials = [
+  {
+    name: "Juliana Carvalho",
+    role: "Cliente Residencial",
+    initials: "JC",
+    content:
+      "Contratei a Br Pragas Campinas para o combate das baratas de esgoto e fiquei extremamente satisfeita. Equipe atenciosa, aplicação profissional e sem cheiro forte. As baratas simplesmente desapareceram!",
+  },
+  {
+    name: "Adriana Souza",
+    role: "Cliente Residencial",
+    initials: "AS",
+    content:
+      "O atendimento foi de excelência, tudo bem explicado antes da aplicação. Tive um bom resultado contra essas baratinhas francesas que são horríveis.",
+  },
+  {
+    name: "Rita Val",
+    role: "Cliente Residencial",
+    initials: "RV",
+    content:
+      "Ótimo trabalho, super profissional. Super indico, nota 10!",
+  },
+  {
+    name: "Cesar Dal Maso",
+    role: "Cliente Residencial",
+    initials: "CD",
+    content:
+      "Ótimo profissional, transparente, competente e pontual no que faz.",
+  },
+  {
+    name: "Fabio Silva",
+    role: "Cliente Residencial",
+    initials: "FS",
+    content:
+      "Contratei o serviço e fiquei surpreso. Henry explicou todo processo com clareza e de fato eliminou todas as formigas de casa. Já faz mais de 4 meses e não tem nenhuma. Ótimo serviço!",
+  },
+  {
+    name: "Cristina Ribeiro",
+    role: "Cliente Residencial",
+    initials: "CR",
+    content:
+      "Para quem está em busca de um serviço de qualidade e segurança para toda família, chama BR Pragas Campinas. Serviço espetacular!",
+  },
+  {
+    name: "Eduardo Campos",
+    role: "Cliente Residencial",
+    initials: "EC",
+    content:
+      "Podem confiar que é proteção para sua casa garantida. Eu fiz e recomendo!",
+  },
+  {
+    name: "Cristina Souza",
+    role: "Cliente Residencial",
+    initials: "CS",
+    content:
+      "Excelente atendimento, rapidez e eficácia!",
+  },
   {
     name: "Roberto Oliveira",
     role: "Proprietário de Restaurante",
@@ -190,6 +246,12 @@ const serviceFeatures = [
     description:
       "Limpeza e sanitização de caixas d'água. Atende normas da vigilância sanitária.",
     icon: Database,
+  },
+  {
+    title: "Desentupimento",
+    description:
+      "Desentupimento de pias, ralos, vasos sanitários, caixas de gordura e tubulações em geral. Atendimento rápido e eficiente.",
+    icon: Wrench,
   },
 ];
 
@@ -457,7 +519,7 @@ export default function Home() {
                     <span className="mr-1 font-semibold">5.0</span>
                   </div>
                   <p className="text-muted-foreground text-left font-medium">
-                    de 43+ avaliações Google
+                    de 53+ avaliações Google
                   </p>
                 </div>
               </div>
@@ -512,7 +574,7 @@ export default function Home() {
                   fill="#4285F4"
                 />
               </svg>
-              Avaliação 5.0 no Google com 43+ clientes
+              Avaliação 5.0 no Google com 53+ clientes
             </div>
             <h2 className="text-left lg:text-center text-3xl font-semibold lg:text-4xl text-[#1f4d2b]">
               Clientes Satisfeitos em Campinas
