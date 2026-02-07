@@ -7,15 +7,17 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title:
-    "BR Pragas Campinas | Dedetização de cupins, ratos, baratas, escorpiões, formigas e aranhas",
+    "BR Pragas Campinas | Dedetização, Desentupimento, Controle de Pragas",
   description:
-    "Dedetização em Campinas e região com avaliação 5.0 ⭐ (53 avaliações). Orçamento grátis via WhatsApp. Controle de cupins, ratos, baratas, escorpiões e mais.",
+    "Dedetização e desentupimento em Campinas e região com avaliação 5.0 ⭐ (53 avaliações). Orçamento grátis via WhatsApp. Controle de cupins, ratos, baratas, escorpiões e mais.",
   keywords: [
     "dedetização campinas",
     "controle de pragas campinas",
     "dedetizadora campinas",
     "desratização campinas",
     "descupinização campinas",
+    "desentupimento campinas",
+    "desentupidora campinas",
   ],
   authors: [{ name: "BR Pragas Campinas" }],
   icons: {
@@ -31,9 +33,9 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title:
-      "BR Pragas Campinas | Dedetização de cupins, ratos, baratas, escorpiões, formigas e aranhas",
+      "BR Pragas Campinas | Dedetização, Desentupimento, Controle de Pragas",
     description:
-      "Dedetização em Campinas com avaliação 5.0. Orçamento grátis via WhatsApp. Atendimento rápido!",
+      "Dedetização e desentupimento em Campinas com avaliação 5.0. Orçamento grátis via WhatsApp. Atendimento rápido!",
     type: "website",
     locale: "pt_BR",
   },
@@ -55,7 +57,7 @@ export default function RootLayout({
     name: "BR Pragas Campinas",
     image: "https://www.brpragas.com.br/logo.png",
     description:
-      "Controle de pragas, dedetização, desratização e descupinização em Campinas e região com avaliação 5.0 estrelas.",
+      "Controle de pragas, dedetização, desratização, descupinização e desentupimento em Campinas e região com avaliação 5.0 estrelas.",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Rua Andrea Fernandes da Silva Araújo, 444",

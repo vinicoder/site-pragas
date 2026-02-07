@@ -493,7 +493,8 @@ export default function Home() {
               </h1>
               <p className="text-muted-foreground mb-8 max-w-xl lg:text-xl">
                 Controle eficaz de cupins, ratos, escorpiões, baratas, formigas,
-                aranhas, pulgas, carrapatos e higienização de caixa d'água.
+                aranhas, pulgas, carrapatos, higienização de caixa d'água e
+                desentupimento.
               </p>
               <div className="mb-12 flex w-fit items-start gap-4">
                 <div className="flex h-12 w-12 items-center justify-center bg-white rounded-full border-2 border-gray-200 shadow-sm">
@@ -655,9 +656,9 @@ export default function Home() {
                   Nossos Serviços
                 </h2>
                 <p className="text-muted-foreground text-xl">
-                  Oferecemos soluções completas de controle de pragas urbanas
-                  com técnicas modernas e produtos certificados. Atendimento em
-                  Campinas e região.
+                  Oferecemos soluções completas de controle de pragas urbanas e
+                  desentupimento com técnicas modernas e produtos certificados.
+                  Atendimento em Campinas e região.
                 </p>
               </div>
               <div className="grid gap-8 sm:grid-cols-2 lg:col-span-6">
